@@ -1,0 +1,20 @@
+import re
+import sys
+def baby_names(htmlfile):
+	q=[]
+	a=open(htmlfile).read()
+	s=re.search(r'\w+\sin\s(d\d\d\d)',a)
+	q.append(s.group(1))
+	print q
+#	d=re.findall(r'<td>(\d+)</td><td>(\w+)</td><td>(\w+)</td>',a)
+#	d.sort(key=lambda k: k[0])	
+#	for i,j,k in d:
+#		q.append(j+""+k+""+i)
+#	print q
+
+
+
+baby_names(sys.argv[1])
+
+
+
